@@ -1,14 +1,14 @@
 package br.com.adopt.petsbackend.service.adapter;
 
-import br.com.adopt.petsbackend.domain.dto.PetDto;
+import br.com.adopt.petsbackend.domain.dto.PetResponseDto;
 import br.com.adopt.petsbackend.domain.entity.Pet;
 import org.springframework.stereotype.Component;
 
 @Component
 public class PetMapper {
 
-    public PetDto toPetDto(final Pet pet) {
-        var petDto = new PetDto();
+    public PetResponseDto toPetResponseDto(final Pet pet) {
+        var petDto = new PetResponseDto();
         petDto.setId(pet.getId());
         petDto.setName(pet.getName());
         petDto.setHistory(pet.getHistory());
